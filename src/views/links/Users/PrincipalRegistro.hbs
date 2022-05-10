@@ -1,0 +1,36 @@
+{{>navigations}}
+
+<div class="wrapper d-flex align-items-stretch">
+    {{>NavLatUsers}}
+
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+        <link rel="stylesheet" type="text/css" href="../../CSS/registro.css" />
+        <center>
+            <h2 class="mb-4 ">Registro</h2>
+        </center>
+        <div class="wrapper">
+
+            <form class="login">
+                <p class="title">Persona</p>
+                <input type="text" placeholder="Cedula" autofocus />
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="Nombre" />
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="Edad" />
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="Foto" />
+                <i class="fa fa-photo"></i>
+
+                <button>
+                    <i class="spinner"></i>
+                    <span class="state">Crear</span>
+                </button>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+{{>script}}

@@ -1,0 +1,13 @@
+body {
+  background-color: white !important;
+}
+
+.cont {
+  display: flex;
+}
+img {
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}

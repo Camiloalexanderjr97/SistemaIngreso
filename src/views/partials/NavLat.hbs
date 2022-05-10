@@ -1,0 +1,35 @@
+ <nav id="sidebar">
+        <div class="custom-menu">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            </button>
+        </div>
+        <div class="img bg-wrap text-center py-4" style="background-image: url(../../Images/bg_1.jpg);">
+            <div class="user-logo">
+                <div class="img" style="background-image: url({{userF}});"></div>
+                
+                
+                <h3>{{user.Usuario}}</h3>
+
+                
+            </div>
+        </div>
+        <ul class="list-unstyled components mb-5">
+            <li class="active">
+                <a href="/Links/Admin/Principal"><span class="fa fa-home mr-3"></span> Home</a>
+            </li>
+          
+            <li>
+                <a href="/Links/Admin/RegistroCredencial"><span class="fa fa-user mr-3"></span> Usuarios</a>
+            </li>
+            <li>
+                <a href="/Links/Admin/Credenciales"><span class="fa fa-pencil mr-3"></span> Credenciales</a>
+            </li>
+            <li>
+                <a href="/Links/Admin/Usuarios"><span class="fa fa-database mr-3"></span> DataBase</a>
+            </li>
+                      <li>
+                <a href="/links/Login"><span class="fa fa-sign-out mr-3"></span> Sign Out</a>
+            </li>
+        </ul>
+
+    </nav>

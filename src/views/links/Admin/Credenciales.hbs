@@ -1,0 +1,79 @@
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="../../vendor/bootstrap/css/bootstrap.min.css" />
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="../../vendor/animate/animate.css" />
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="../../vendor/select2/select2.min.css" />
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="../../vendor/perfect-scrollbar/perfect-scrollbar.css" />
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="../../CSS/util.css" />
+<link rel="stylesheet" type="text/css" href="../../CSS/main.css" />
+<link rel="stylesheet" type="text/css" href="../../fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" type="text/css" href="../../CSS/Menu.css" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="wrapper d-flex align-items-stretch">
+    {{>NavLat}}
+{{>Message}}
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+
+        <div class="limiter">
+            <div class="container-table100">
+                <div class="wrap-table100">
+                    <div class="table100 ver1 m-b-110">
+                        <div class="table100-head">
+                            <table>
+                                <thead>
+                                    <tr class="row100 head">
+                                        <th class="cell100 column1">Cedula</th>
+                                        <th class="cell100 column2">Usuario</th>
+                                        <th class="cell100 column3">Contraseña</th>
+                                        <th class="cell100 column4"></th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+
+                        <div class="table100-body js-pscroll">
+                            <table>
+                                <tbody>
+                                    {{#each login}}
+                                    <tr class="row100 body">
+                                        <td class="cell100 column1">{{Cedula}}</td>
+                                        <td class="cell100 column2">{{Usuario}}</td>
+                                        <td class="cell100 column3">{{Password}}</td>
+                                        <td class="cell100 column4">
+                                            <div style="inline">
+                                                <button style="padding-right: 30px;">
+                                                    <ion-icon name="pencil" size="large"></ion-icon>
+                                                </button>
+
+                                                <button>
+                                                    <ion-icon name="trash" size="large"></ion-icon>
+                                                </button>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {{/each}}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{>script}}
+
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

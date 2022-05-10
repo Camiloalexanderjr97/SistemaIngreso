@@ -1,0 +1,145 @@
+<link rel="stylesheet" type="text/css" href="../../../CSS/Menu.css" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{{!-- <link rel="stylesheet" type="text/css" href="../../../CSS/persona.css" /> --}}
+
+
+
+<div class="wrapper d-flex align-items-stretch">
+  <nav id="sidebar">
+        <div class="custom-menu">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            </button>
+        </div>
+        <div class="img bg-wrap text-center py-4" style="background-image: url(../../../Images/bg_1.jpg);">
+            <div class="user-logo">
+                <div class="img" style="background-image: url({{userF}});"></div>
+                
+                
+                <h3>{{user.Usuario}}</h3>
+
+                
+            </div>
+        </div>
+        <ul class="list-unstyled components mb-5">
+            <li class="active">
+                <a href="/Links/Admin/Principal"><span class="fa fa-home mr-3"></span> Home</a>
+            </li>
+          
+            <li>
+                <a href="/Links/Admin/RegistroCredencial"><span class="fa fa-user mr-3"></span> Usuarios</a>
+            </li>
+            <li>
+                <a href="/Links/Admin/Credenciales"><span class="fa fa-pencil mr-3"></span> Credenciales</a>
+            </li>
+            <li>
+                <a href="/Links/Admin/Usuarios"><span class="fa fa-database mr-3"></span> DataBase</a>
+            </li>
+                      <li>
+                <a href="/links/Login"><span class="fa fa-sign-out mr-3"></span> Sign Out</a>
+            </li>
+        </ul>
+
+    </nav>
+
+<div></div>
+<div class="container">
+    <div class="main-body">
+    
+
+    <br></br>
+      
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src="{{usuarios.Foto}}" alt="Admin" style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto; margin-bottom: 10px">
+                    
+                    <div class="mt-3">
+                      <h4>{{usuarios.Nombre}}</h4>
+                      <form action="/links/Admin/MostrarF/{{usuarios.Cedula}}" method="POST" enctype="multipart/form-data" >
+                      <input type="file" value="" name="image">
+                      <br></br>
+                      <button class="btn btn-info" type="submit" target="__blank">
+                        <span>Editar</span>
+                     </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Cedula</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{usuarios.Cedula}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Nombre</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{usuarios.Nombre}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Edad</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{usuarios.Edad}}
+                    </div>
+                  </div>
+                  <hr>
+                  
+                 
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <a class="btn btn-info " target="__blank" href="/links/Admin/Editar/{{usuarios.Cedula}}">Edit</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+         
+            </div>
+
+             <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    
+                    <div class="mt-3">
+                      <h4>Registrar Huella</h4>
+                      <form action="/links/Admin/RegistroH/{{usuarios.Cedula}}" method="POST" >
+                      <input type="file" value="" name="image">
+                      <br></br>
+                      <button class="btn btn-info" type="submit" target="__blank">
+                        <span>Editar</span>
+                     </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+        </div>
+</div>
+
+</div>
+
+<script src="../../../js/jquery.min.js"></script>
+    {{!-- <script src="../../../js/popper.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script> --}}
+    <script src="../../../js/main.js"></script>

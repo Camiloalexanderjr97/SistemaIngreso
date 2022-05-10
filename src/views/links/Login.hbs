@@ -1,0 +1,25 @@
+  <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
+   
+{{>Message}}
+<div id="contenedor">
+    
+    <div id="central">
+        <div id="login">
+            <div class="titulo">
+                Bienvenido
+            </div>
+            <form action="/links/Login" method="POST">
+                <input type="text" name="Cedula" placeholder="Cedula" required>
+
+                <input type="text"  name="Usuario" placeholder="Usuario" required>
+
+                <input type="password" placeholder="Contrasena" name="Pass" required>
+
+                <button type="submit" title="Ingresar" name="Ingresar">Login</button>
+            </form>
+            <div class="pie-form">
+                <a href="#">¿Perdiste tu contraseña?</a>
+            </div>
+        </div>
+    </div>
+</div>

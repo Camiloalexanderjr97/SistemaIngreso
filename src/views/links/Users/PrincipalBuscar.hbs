@@ -1,0 +1,44 @@
+{{>navigations}}
+<div class="wrapper d-flex align-items-stretch">
+    {{>NavLatUsers}}
+
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+        <link href="../../CSS/Buscar.css" rel="stylesheet" type="text/css" />
+
+
+        <form class="searchForm" method="get" action="">
+            <center><input class="searchTerm" placeholder="Search…" autocomplete="off" />
+                <input type="submit" class="searchBtn" value="GO" />
+            </center>
+
+        </form>
+        <div class="resultado">
+            <h1>Resultado</h1>
+            <table>
+                <thead>
+                    <tr class="row100 head">
+                        <th class="cell100 column1">Cedula</th>
+                        <th class="cell100 column2">Nombre</th>
+                        <th class="cell100 column3">Edad</th>
+                    </tr>
+                </thead>
+            </table>
+            <table>
+                <tbody>
+                    {{#each clientes}}
+                    <tr class="row100 body">
+                        <td class="cell100 column1">{{Cedula}}</td>
+                        <td class="cell100 column2">{{Nombre}}</td>
+                        <td class="cell100 column3">{{Edad}}</td>
+
+                    </tr>
+                    {{/each}}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{{>script}}

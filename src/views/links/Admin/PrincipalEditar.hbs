@@ -1,0 +1,79 @@
+<link rel="stylesheet" type="text/css" href="../../../CSS/Menu.css" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="wrapper d-flex align-items-stretch">
+  <nav id="sidebar">
+        <div class="custom-menu">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            </button>
+        </div>
+        <div class="img bg-wrap text-center py-4" style="background-image: url(../../../Images/bg_1.jpg);">
+            <div class="user-logo">
+                <div class="img" style="background-image: url(../../../Images/logo.jpg);"></div>
+                
+                
+                <h3>Catriona Henderson</h3>
+
+                
+            </div>
+        </div>
+        <ul class="list-unstyled components mb-5">
+            <li class="active">
+                <a href="/Links/Admin/Principal"><span class="fa fa-home mr-3"></span> Home</a>
+            </li>
+          
+            <li>
+                <a href="/Links/Admin/RegistroCredencial"><span class="fa fa-user mr-3"></span> Usuarios</a>
+            </li>
+            <li>
+                <a href="/Links/Admin/Credenciales"><span class="fa fa-pencil mr-3"></span> Credenciales</a>
+            </li>
+            <li>
+                <a href="/Links/Admin/Usuarios"><span class="fa fa-database mr-3"></span> DataBase</a>
+            </li>
+                      <li>
+                <a href="/links/Login"><span class="fa fa-sign-out mr-3"></span> Sign Out</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+        {{>Message}}
+        <link rel="stylesheet" type="text/css" href="../../../CSS/registro.css" />
+        <center>
+            <h2 class="mb-4 ">Registro</h2>
+        </center>
+        <div class="wrapper">
+
+            <form class="login" action="/links/Admin/Editar/{{usuarios.Cedula}}" method="POST">
+            
+                <p class="title">Persona</p>
+                <input type="number"  name="Cedula" maxlength="12"  value="{{usuarios.Cedula}}" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  placeholder="Cedula" autofocus required/>
+                <i class="fa fa-user"></i>
+                <input type="text" name="Nombre"  value="{{usuarios.Nombre}}" required/>
+                <i class="fa fa-user"></i>
+                <input type="text" name="Edad" value="{{usuarios.Edad}}" required/>
+                <i class="fa fa-user"></i>
+                {{!-- <input type="file" name="Foto" placeholder="Foto" />
+                <i class="fa fa-photo"></i>
+            --}}
+                <button>
+                    <i class="spinner"></i>
+                    <span class="state">Crear</span>
+                </button>
+            </form>
+
+
+
+        </div>
+
+    </div>
+</div>
+<script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/popper.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/main.js"></script>
